@@ -200,7 +200,7 @@ def adjust_central_body_velocity(bodies_data):
 
 
 def initialize_system(bodies_data: list) -> System:
-    """Prepare hard-coded system for the Sun and its major planets (we live here!)."""
+    """Converts list of bodies into a System object."""
     # add each body to a system
     system = System()
     for name, mass, x, y, vx, vy in bodies_data:
@@ -258,7 +258,7 @@ far_third_bodies_data = [  # Alpha-Beta double ring, with a distant fly-by
     # name,     mass (kg),   x (m),      y (m),      vx (m/s),   vy (m/s)
     ('Alpha',   2e30,        -1e11,      0,          0,          12000),
     ('Beta',    2e30,         1e11,      0,          0,         -12000),
-    # ('Interloper', 2e30,      1e12,         9e11,     -15000,     0),
+    ('Interloper', 2e30,      1e12,         9e11,     -15000,     0),
 ]
 
 stable_three_bodies_data = [  # "Lagrange Equilateral Triangel"
